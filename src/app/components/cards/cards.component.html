@@ -1,0 +1,13 @@
+<div class="d-flex" style="flex-wrap: wrap;justify-content: center;">
+  <div *ngFor="let livro of livros">
+    <div class="card m-5 test">
+      <div class="card-body">
+        <img src="{{livro.foto}}"class="card-img-top">
+        <div class="card-title text-center">
+          <p><b> Livro: {{livro.nome}}</b></p>
+        <p style="opacity: 50%;">Autor: {{livro.autor}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

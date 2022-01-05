@@ -1,0 +1,36 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Excluir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let livro of livros">
+      <th>{{livro.id}}</th>
+      <td>{{livro.nome}}</td>
+      <td>{{livro.autor}}</td>
+      <td>
+        <button type="button" (click)="editar(livro.id)" class="btn btn-primary">Editar</button>
+      </td>
+      <td>
+        <button  type="button" (click)="mostrarModal(livro.id)" class="btn btn-danger">Excluir</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<div *ngIf="isModal">
+  <div class="minhaModal">
+    <div class="tituloModal bg-dark text-white">
+      <h5>Aviso</h5>
+    </div>
+    <h6 class="my-4">Confirma essa operação ?</h6>
+    <button class="btn btn-outline-danger mx-1" (click)="cancelarAcao()">Cancelar</button>
+    <button class="btn btn-danger mx-1" (click)="confirmarAcao()">Confirmar</button>
+  </div>
+</div>
+

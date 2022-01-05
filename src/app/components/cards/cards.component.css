@@ -1,0 +1,8 @@
+.test:hover{
+  background-color: rgba(197, 203, 211, 0.432);
+  cursor: pointer;
+  transition: 500ms;
+}
+ .test{
+   transition: 500ms;
+ }
